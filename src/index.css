@@ -1,0 +1,209 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  
+  body {
+    @apply bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900;
+    @apply text-white min-h-screen;
+  }
+}
+
+@layer components {
+  .voice-button {
+    @apply relative overflow-hidden;
+    @apply transition-all duration-300 ease-in-out;
+    @apply transform hover:scale-105;
+  }
+  
+  .voice-button::before {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-r from-ai-blue to-ai-green;
+    @apply rounded-full opacity-20;
+    @apply transition-opacity duration-300;
+  }
+  
+  .voice-button:hover::before {
+    @apply opacity-30;
+  }
+  
+  .voice-button.listening::before {
+    @apply opacity-40;
+    animation: pulse-soft 2s ease-in-out infinite;
+  }
+  
+  .message-bubble {
+    @apply max-w-xs lg:max-w-md px-5 py-3 rounded-3xl;
+    @apply shadow-lg backdrop-blur-sm;
+    @apply transition-all duration-300 ease-out;
+    @apply border border-white/5;
+  }
+  
+  .user-message {
+    @apply bg-gradient-to-br from-ai-blue/20 via-ai-blue/15 to-ai-blue/10;
+    @apply border-ai-blue/20;
+    @apply ml-auto text-right;
+    @apply shadow-ai-blue/10;
+  }
+  
+  .assistant-message {
+    @apply bg-gradient-to-br from-slate-800/60 via-slate-800/40 to-slate-800/20;
+    @apply border-slate-600/30;
+    @apply mr-auto text-left;
+    @apply shadow-slate-900/20;
+  }
+}
+
+.wave {
+  display: inline-block;
+  animation: wave 1.2s ease-in-out infinite;
+}
+
+.wave:nth-child(1) { animation-delay: 0s; }
+.wave:nth-child(2) { animation-delay: 0.1s; }
+.wave:nth-child(3) { animation-delay: 0.2s; }
+.wave:nth-child(4) { animation-delay: 0.3s; }
+.wave:nth-child(5) { animation-delay: 0.4s; }
+
+@keyframes wave {
+  0%, 60%, 100% { 
+    transform: scaleY(1); 
+    opacity: 0.6;
+  }
+  30% { 
+    transform: scaleY(1.8); 
+    opacity: 1;
+  }
+}
+
+@keyframes pulse-soft {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.05);
+  }
+}
+
+/* Smooth scrollbar for chat area */
+.chat-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+
+.chat-scroll::-webkit-scrollbar-track {
+  background: rgba(71, 85, 105, 0.1);
+  border-radius: 3px;
+}
+
+.chat-scroll::-webkit-scrollbar-thumb {
+  background: rgba(71, 85, 105, 0.5);
+  border-radius: 3px;
+}
+
+.chat-scroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(71, 85, 105, 0.7);
+}
+
+/* Improved focus states */
+input:focus, textarea:focus {
+  @apply ring-2 ring-ai-blue/30 ring-offset-2 ring-offset-slate-800;
+}
+
+/* Input area specific styles */
+.input-container {
+  @apply flex items-center bg-gradient-to-r from-white/5 via-white/10 to-white/5;
+  @apply backdrop-blur-md border border-white/10;
+  @apply rounded-3xl p-3 min-h-[56px];
+  @apply shadow-lg shadow-black/10;
+  @apply transition-all duration-300 ease-in-out;
+  @apply hover:shadow-xl hover:shadow-black/15;
+  @apply focus-within:border-ai-blue/30 focus-within:bg-white/15;
+}
+
+.input-container input {
+  @apply flex-1 bg-transparent border-none outline-none px-5 py-3;
+  @apply text-white placeholder-gray-400 min-h-[40px];
+  @apply focus:ring-0 focus:outline-none;
+  @apply transition-all duration-200;
+}
+
+.input-container button {
+  @apply flex-shrink-0 p-3 rounded-2xl transition-all duration-300;
+  @apply hover:scale-110 active:scale-95;
+  @apply shadow-md hover:shadow-lg;
+  @apply transform-gpu;
+}
+
+/* Custom animations for better UX */
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-slide-in-up {
+  animation: slideInUp 0.3s ease-out;
+}
+
+.animate-fade-in-scale {
+  animation: fadeInScale 0.2s ease-out;
+}
+
+/* Voice button organic styling */
+.voice-button-organic {
+  @apply relative overflow-hidden;
+  @apply rounded-2xl p-3 transition-all duration-300 ease-in-out;
+  @apply transform hover:scale-105 active:scale-95;
+  @apply bg-gradient-to-br from-white/10 to-white/5;
+  @apply backdrop-blur-sm border border-white/10;
+  @apply shadow-lg hover:shadow-xl;
+}
+
+.voice-button-organic::before {
+  content: '';
+  @apply absolute inset-0 bg-gradient-to-r from-ai-blue/20 to-ai-green/20;
+  @apply rounded-2xl opacity-0;
+  @apply transition-opacity duration-300;
+}
+
+.voice-button-organic:hover::before {
+  @apply opacity-100;
+}
+
+.voice-button-organic.listening::before {
+  @apply opacity-100;
+  animation: pulse-organic 2s ease-in-out infinite;
+}
+
+@keyframes pulse-organic {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.02);
+  }
+} 

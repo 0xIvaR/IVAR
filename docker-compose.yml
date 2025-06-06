@@ -1,0 +1,60 @@
+version: '3.8'
+
+services:
+  # Frontend service
+  frontend:
+    build:
+      context: .
+      target: production
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+    networks:
+      - ivar-network
+
+  # Backend service  
+  backend:
+    build:
+      context: .
+      target: server
+    ports:
+      - "5000:5000"
+    environment:
+      - NODE_ENV=production
+      - PORT=5000
+    env_file:
+      - .env
+    volumes:
+      - .:/app
+      - /app/node_modules
+    networks:
+      - ivar-network
+
+  # Development setup
+  dev:
+    build:
+      context: .
+      target: server
+    ports:
+      - "5173:5173"  # Vite dev server
+      - "5000:5000"  # Backend server
+    environment:
+      - NODE_ENV=development
+    env_file:
+      - .env
+    volumes:
+      - .:/app
+      - /app/node_modules
+    command: sh -c "npm run dev & npm run server"
+    networks:
+      - ivar-network
+    profiles:
+      - dev
+
+networks:
+  ivar-network:
+    driver: bridge
+
+volumes:
+  node_modules: 
