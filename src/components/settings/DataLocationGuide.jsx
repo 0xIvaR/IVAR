@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Database, Info, X, Download, Upload, Trash2, RefreshCw } from 'lucide-react'
-import { storageInfo, debugStorage } from '../utils/dataManager'
+import { storageInfo, debugStorage } from '../../utils/dataManager'
 
 const DataLocationGuide = ({ isOpen, onClose }) => {
   const [storageData, setStorageData] = useState(null)

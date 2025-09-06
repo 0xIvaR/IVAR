@@ -12,11 +12,11 @@ import {
   Plus,
   Database
 } from 'lucide-react'
-import VoiceRecognition from './components/VoiceRecognition'
-import ChatInterface from './components/ChatInterface'
-import WaveAnimation from './components/WaveAnimation'
-import AISettings from './components/AISettings'
-import DataLocationGuide from './components/DataLocationGuide'
+import VoiceRecognition from './components/voice/VoiceRecognition'
+import ChatInterface from './components/chat/ChatInterface'
+import WaveAnimation from './components/ui/WaveAnimation'
+import AISettings from './components/settings/AISettings'
+import DataLocationGuide from './components/settings/DataLocationGuide'
 import aiService from './services/aiService'
 import { debugStorage } from './utils/dataManager'
 

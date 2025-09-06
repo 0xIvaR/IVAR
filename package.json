@@ -4,44 +4,48 @@
   "type": "module",
   "description": "🤖 IVAR - A cutting-edge AI voice assistant with real-time speech processing, multi-provider AI integration (OpenAI, Gemini, Hugging Face), and beautiful React UI. Built for developers who want to create the next generation of voice interfaces.",
   "main": "index.js",
-
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
     "server": "node server/index.js",
     "start": "npm run server",
+    "setup": "node scripts/setup.js",
+    "build:prod": "node scripts/build.js",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "lint:fix": "eslint . --ext js,jsx --fix",
     "format": "prettier --write \"src/**/*.{js,jsx,css,md}\"",
     "test": "echo \"Tests will be added soon\" && exit 0",
     "test:watch": "echo \"Test watch mode will be added soon\" && exit 0",
-    "test:coverage": "echo \"Test coverage will be added soon\" && exit 0"
+    "test:coverage": "echo \"Test coverage will be added soon\" && exit 0",
+    "docs:serve": "echo \"Documentation server will be added soon\" && exit 0",
+    "clean": "rimraf dist node_modules/.vite",
+    "typecheck": "echo \"TypeScript checking will be added soon\" && exit 0"
   },
   "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
     "axios": "^1.6.0",
-    "lucide-react": "^0.294.0",
-    "framer-motion": "^10.16.4",
-    "openai": "^4.20.0",
-    "express": "^4.18.2",
     "cors": "^2.8.5",
-    "dotenv": "^16.3.1"
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "framer-motion": "^10.16.4",
+    "lucide-react": "^0.294.0",
+    "openai": "^4.20.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.37",
     "@types/react-dom": "^18.2.15",
-    "@vitejs/plugin-react": "^4.1.0",
-    "vite": "^4.5.0",
-    "tailwindcss": "^3.3.5",
+    "@vitejs/plugin-react": "^5.0.2",
     "autoprefixer": "^10.4.16",
-    "postcss": "^8.4.31",
     "eslint": "^8.45.0",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
-    "prettier": "^3.0.0"
+    "postcss": "^8.4.31",
+    "prettier": "^3.0.0",
+    "tailwindcss": "^3.3.5",
+    "vite": "^6.3.5"
   },
   "keywords": [
     "voice-assistant",
@@ -90,4 +94,4 @@
       "last 1 safari version"
     ]
   }
-} 
+}

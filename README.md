@@ -1,297 +1,273 @@
-# 🤖 IVAR - Intelligent Voice Assistant & Responder
+# 🤖 IVAR - AI Voice Assistant
 
-<p align="center">
-  <img src="https://img.shields.io/badge/React-18.2.0-blue?style=for-the-badge&logo=react" alt="React">
-  <img src="https://img.shields.io/badge/Node.js-18+-green?style=for-the-badge&logo=node.js" alt="Node.js">
-  <img src="https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge" alt="License">
-  <img src="https://img.shields.io/badge/AI-Powered-purple?style=for-the-badge&logo=openai" alt="AI Powered">
-  <img src="https://img.shields.io/github/stars/0xIvaR/IVAR?style=for-the-badge" alt="GitHub Stars">
-  <img src="https://img.shields.io/github/forks/0xIvaR/IVAR?style=for-the-badge" alt="GitHub Forks">
-</p>
+<div align="center">
 
-<p align="center">
-  <strong>🚀 The Next-Gen AI Voice Assistant - Built for Developers, Designed for Everyone</strong>
-</p>
+![IVAR Logo](public/assets/images/logo.png)
 
-<p align="center">
-  A cutting-edge voice assistant that rivals Google Assistant and Siri, featuring multi-provider AI integration, real-time speech processing, and a stunning React interface. Perfect for developers building the future of voice technology.
-</p>
+**A cutting-edge AI voice assistant with real-time speech processing, multi-provider AI integration, and beautiful React UI**
 
-<p align="center">
-  <a href="#-features">Features</a> •
-  <a href="#-demo">Demo</a> •
-  <a href="#-quick-start">Quick Start</a> •
-  <a href="#-api-setup">API Setup</a> •
-  <a href="#-deployment">Deployment</a> •
-  <a href="#-contributing">Contributing</a>
-</p>
+[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/0xIvaR/IVAR)
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+[![React](https://img.shields.io/badge/React-18.2.0-61dafb.svg)](https://reactjs.org/)
+[![Vite](https://img.shields.io/badge/Vite-6.3.5-646cff.svg)](https://vitejs.dev/)
 
----
+[🚀 Live Demo](#) | [📖 Documentation](docs/README.md) | [💡 Examples](examples/README.md) | [🐛 Issues](https://github.com/0xIvaR/IVAR/issues)
+
+</div>
 
 ## ✨ Features
 
-### 🎤 **Voice Recognition & Speech**
-- **Real-time voice recognition** with Web Speech API
-- **Natural text-to-speech** with multiple voice options
-- **Visual feedback** with animated voice waves
-- **Push-to-talk & continuous listening** modes
+- 🎤 **Real-time Voice Recognition** - Advanced speech-to-text with Web Speech API
+- 🤖 **Multi-AI Provider Support** - OpenAI GPT, Google Gemini, Hugging Face, and more
+- 🗣️ **Natural Voice Synthesis** - High-quality text-to-speech with customizable voices
+- 💬 **Interactive Chat Interface** - Beautiful, responsive conversation UI
+- 🎨 **Modern Design** - Tailwind CSS with smooth animations and gradients
+- 🔧 **Highly Configurable** - Extensive settings for AI providers, voice, and UI
+- 📱 **Cross-Platform** - Works on desktop, mobile, and tablet
+- 🔒 **Privacy-First** - Local storage, no data collection
+- 🚀 **Fast & Lightweight** - Optimized build with Vite
 
-### 🧠 **AI-Powered Intelligence**
-- **Multiple AI providers** support:
-  - 🆓 Google Gemini (Free & Recommended)
-  - 🤗 Hugging Face (Open Source)
-  - 🚀 OpenAI GPT (Premium Quality)
-  - 🔄 Cohere (Alternative)
-- **Context-aware conversations** with memory
-- **Natural language processing** for complex queries
+## 📁 Project Structure
 
-### 💬 **Chat Interface**
-- **Beautiful, modern UI** with smooth animations
-- **Message history** with persistent storage
-- **Multiple chat sessions** management
-- **Real-time typing indicators**
-- **Mobile-responsive design**
-
-### ⚙️ **Customization & Settings**
-- **Easy AI provider switching** with visual setup guide
-- **Voice settings** (enable/disable speech)
-- **Data management** with local storage
-- **Debug tools** for developers
-
-### 🔒 **Privacy & Security**
-- **Local data storage** - your conversations stay private
-- **No data sent to third parties** (except chosen AI provider)
-- **API keys stored securely** in browser
-- **Open source** - fully auditable code
-
----
-
-## 🎯 Demo
-
-### Live Features:
-- 🗣️ **Voice Commands**: "What's the weather like today?"
-- 💭 **Natural Conversations**: Ask follow-up questions
-- 🎨 **Beautiful Animations**: Responsive UI with smooth transitions
-- 📱 **Mobile Ready**: Works perfectly on phones and tablets
-
----
+```
+IVAR/
+├── 📁 src/                    # Source code
+│   ├── 📁 components/         # React components
+│   │   ├── 📁 voice/         # Voice-related components
+│   │   ├── 📁 chat/          # Chat interface components
+│   │   ├── 📁 ui/            # Reusable UI components
+│   │   └── 📁 settings/      # Settings and configuration
+│   ├── 📁 services/          # API services and integrations
+│   ├── 📁 utils/             # Utility functions
+│   ├── 📁 hooks/             # Custom React hooks
+│   ├── 📁 styles/            # CSS and styling files
+│   └── 📁 constants/         # Application constants
+├── 📁 public/                # Static assets
+│   └── 📁 assets/            # Images, icons, and media
+├── 📁 server/                # Backend server (optional)
+├── 📁 docs/                  # Documentation
+├── 📁 examples/              # Usage examples and demos
+├── 📁 tests/                 # Test files
+├── 📁 scripts/               # Build and utility scripts
+└── 📁 config/                # Configuration files
+```
 
 ## 🚀 Quick Start
 
 ### Prerequisites
-- **Node.js** 18+ and npm 8+
-- **Modern browser** with Web Speech API support
-- **Microphone access** for voice features
 
-### 1. Clone & Install
-```bash
-# Clone the repository
-git clone https://github.com/0xIvaR/IVAR.git
-cd IVAR
-npm install
+- Node.js 18+ 
+- npm 8+
+- Modern web browser with microphone access
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/0xIvaR/IVAR.git
+   cd IVAR
+   ```
+
+2. **Run setup script**
+   ```bash
+   npm run setup
+   ```
+
+3. **Configure API keys** (optional)
+   ```bash
+   # Edit .env file with your AI provider keys
+   cp public/env.example .env
+   ```
+
+4. **Start development server**
+   ```bash
+   npm run dev
+   ```
+
+5. **Open in browser**
+   ```
+   http://localhost:3000
+   ```
+
+## 🎯 Usage Examples
+
+### Basic Voice Interaction
+```javascript
+import { VoiceRecognition } from './src/components/voice'
+
+const handleVoiceInput = (transcript) => {
+  console.log('User said:', transcript)
+  // Process with AI service
+}
+
+<VoiceRecognition onResult={handleVoiceInput} />
 ```
 
-### 2. Get Free AI API Key
-Choose your preferred provider (we recommend Google Gemini for beginners):
+### AI Integration
+```javascript
+import aiService from './src/services/aiService'
 
-| Provider | Free Tier | Setup Difficulty | Quality |
-|----------|-----------|------------------|---------|
-| 🥇 **Google Gemini** | ✅ Generous | 🟢 Easy | 🟡 Great |
-| 🥈 **Hugging Face** | ✅ Unlimited | 🟢 Easy | 🟡 Good |
-| 🥉 **OpenAI** | 💰 $5 Credits | 🟡 Medium | 🟢 Excellent |
+// Configure AI provider
+aiService.setProvider('openai', 'your-api-key')
 
-📖 **Detailed Setup Guide**: See [FREE_API_GUIDE.md](./FREE_API_GUIDE.md)
-
-### 3. Run Development
-```bash
-# Start both frontend and backend
-npm run dev    # Frontend (React + Vite)
-npm run server # Backend (Express) - in another terminal
+// Get AI response
+const response = await aiService.getResponse('Hello, how are you?')
 ```
 
-### 4. Configure AI
-1. Open http://localhost:5173
-2. Click the **Settings** ⚙️ icon
-3. Choose your AI provider
-4. Follow the visual setup guide
-5. Enter your API key
-6. Start chatting! 🎉
-
----
-
-## 🔧 API Setup
-
-### 🆓 Google Gemini (Recommended)
-```bash
-# 1. Visit: https://aistudio.google.com
-# 2. Sign in with Google account
-# 3. Create API key
-# 4. Copy & paste in IVAR settings
+### Custom Voice Settings
+```javascript
+const voiceSettings = {
+  rate: 1.0,      // Speed
+  pitch: 1.0,     // Pitch
+  volume: 0.8,    // Volume
+  voice: 'Google US English'
+}
 ```
 
-### 🤗 Hugging Face (Open Source)
-```bash
-# 1. Visit: https://huggingface.co
-# 2. Create account
-# 3. Settings → Access Tokens
-# 4. Create token with read permissions
+## 🔧 Configuration
+
+### AI Providers
+
+| Provider | Description | Setup |
+|----------|-------------|-------|
+| **OpenAI** | GPT models (3.5, 4) | [API Key Required](docs/providers/openai.md) |
+| **Google** | Gemini Pro | [API Key Required](docs/providers/google.md) |
+| **Hugging Face** | Open source models | [API Key Required](docs/providers/huggingface.md) |
+| **Local** | Built-in responses | No setup required |
+
+### Voice Options
+
+- **Speech Recognition**: 50+ languages supported
+- **Voice Synthesis**: Platform-specific voices
+- **Custom Voices**: Upload your own voice models
+- **Voice Commands**: Create custom voice shortcuts
+
+## 📋 Available Scripts
+
+| Script | Description |
+|--------|-------------|
+| `npm run dev` | Start development server |
+| `npm run build` | Build for production |
+| `npm run preview` | Preview production build |
+| `npm run setup` | Initial project setup |
+| `npm run lint` | Lint code |
+| `npm run format` | Format code |
+| `npm test` | Run tests |
+
+## 🏗️ Architecture
+
+### Component Structure
+```
+components/
+├── voice/          # Voice input/output handling
+├── chat/           # Conversation interface
+├── ui/             # Reusable UI elements
+└── settings/       # Configuration panels
 ```
 
-### 🚀 OpenAI (Premium)
-```bash
-# 1. Visit: https://platform.openai.com
-# 2. Sign up & verify phone
-# 3. Get $5 free credits
-# 4. Create API key
+### Service Layer
+```
+services/
+├── aiService.js    # AI provider abstraction
+├── voiceService.js # Speech recognition/synthesis
+└── storageService.js # Local data management
 ```
 
-**Full guide with screenshots**: [FREE_API_GUIDE.md](./FREE_API_GUIDE.md)
+### State Management
+- React Context for global state
+- Local state for component-specific data
+- LocalStorage for persistence
 
----
+## 🎨 Customization
 
-## 🏗️ Project Structure
+### Themes
+- Light/Dark mode support
+- Custom color schemes
+- Responsive design
+- Animation preferences
 
-```
-IVAR/
-├── 📁 src/
-│   ├── 📄 App.jsx              # Main application
-│   ├── 📁 components/          # React components
-│   │   ├── VoiceRecognition.jsx   # Voice input handling
-│   │   ├── ChatInterface.jsx      # Chat UI
-│   │   ├── AISettings.jsx         # AI configuration
-│   │   └── WaveAnimation.jsx      # Voice visualizations
-│   ├── 📁 services/            # API integrations
-│   └── 📁 utils/               # Helper functions
-├── 📁 server/                  # Express backend
-├── 📄 package.json            # Dependencies
-├── 📄 FREE_API_GUIDE.md       # API setup guide
-└── 📄 DEPLOYMENT.md           # Deployment instructions
-```
+### Voice Personalities
+- Different AI personalities
+- Custom response templates
+- Voice characteristic settings
+- Conversation styles
 
----
+## 🔒 Privacy & Security
 
-## 🛠️ Development
+- **No Data Collection**: All conversations stored locally
+- **API Key Security**: Environment variable management
+- **HTTPS Required**: Secure microphone access
+- **Local Processing**: Speech recognition runs in browser
 
-### Available Scripts
-```bash
-npm run dev          # Start development server
-npm run build        # Build for production
-npm run preview      # Preview production build
-npm run server       # Start backend server
-npm run lint         # Lint code
-npm run format       # Format code with Prettier
-```
+## 📚 Documentation
 
-### Tech Stack
-- **Frontend**: React 18, Vite, TailwindCSS, Framer Motion
-- **Backend**: Node.js, Express, CORS
-- **AI Integration**: OpenAI, Google Gemini, Hugging Face APIs
-- **Voice**: Web Speech API (SpeechRecognition, SpeechSynthesis)
-- **Storage**: Browser localStorage
-- **Deployment**: Docker, Vercel, Netlify ready
-
----
-
-## 🚀 Deployment
-
-### Quick Deploy Options
-
-#### Vercel (Recommended)
-```bash
-npm install -g vercel
-vercel --prod
-```
-
-#### Netlify
-```bash
-npm run build
-# Drag & drop 'dist' folder to netlify.com
-```
-
-#### Docker
-```bash
-docker-compose up -d
-```
-
-**Detailed deployment guide**: [DEPLOYMENT.md](./DEPLOYMENT.md)
-
----
+| Topic | Link |
+|-------|------|
+| **Getting Started** | [docs/getting-started.md](docs/getting-started.md) |
+| **API Reference** | [docs/api-reference.md](docs/api-reference.md) |
+| **Deployment** | [docs/deployment.md](docs/DEPLOYMENT.md) |
+| **Contributing** | [docs/contributing.md](docs/CONTRIBUTING.md) |
+| **Troubleshooting** | [docs/troubleshooting.md](docs/troubleshooting.md) |
 
 ## 🤝 Contributing
 
-We welcome contributions! Please see [CONTRIBUTING.md](./CONTRIBUTING.md) for guidelines.
+We welcome contributions! Please see our [Contributing Guide](docs/CONTRIBUTING.md) for details.
 
-### Quick Contribution Steps:
-1. 🍴 Fork the repository
-2. 🌿 Create feature branch (`git checkout -b feature/amazing-feature`)
-3. 💫 Make your changes
-4. ✅ Test thoroughly
-5. 📝 Commit (`git commit -m 'Add amazing feature'`)
-6. 🚀 Push (`git push origin feature/amazing-feature`)
-7. 🎯 Open Pull Request
+### Development Workflow
 
----
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Add tests if applicable
+5. Submit a pull request
 
-## 📊 Roadmap
+### Code Style
 
-### Current Version (v1.0.0)
-- ✅ Voice recognition & synthesis
-- ✅ Multiple AI providers
-- ✅ Chat interface with history
-- ✅ Local data storage
-- ✅ Mobile responsive design
+- ESLint configuration included
+- Prettier for code formatting
+- Conventional commit messages
+- Component-based architecture
 
-### Upcoming Features
-- 🔄 **Smart Home Integration** (Philips Hue, IoT devices)
-- 🌐 **Multi-language Support** (Spanish, French, German)
-- 📱 **Mobile App** (React Native)
-- 🧩 **Plugin System** (Custom commands)
-- 🎵 **Music Control** (Spotify, YouTube integration)
-- 📅 **Calendar Integration** (Google Calendar, Outlook)
+## 🐛 Troubleshooting
 
----
+### Common Issues
+
+| Issue | Solution |
+|-------|----------|
+| Microphone not working | Check browser permissions |
+| AI not responding | Verify API keys in .env |
+| Build errors | Run `npm run clean` then `npm install` |
+| Voice synthesis fails | Check browser compatibility |
+
+See [Troubleshooting Guide](docs/troubleshooting.md) for more details.
 
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
----
+## 👨‍💻 Author
+
+**Soham Kundu**
+- GitHub: [@0xIvaR](https://github.com/0xIvaR)
+- Email: sohamkundu4012@gmail.com
 
 ## 🙏 Acknowledgments
 
-- **OpenAI** for GPT API and inspiration
-- **Google** for Gemini AI and Web Speech API
-- **Hugging Face** for open-source AI models
-- **React Team** for the amazing framework
-- **Community contributors** who make this project better
+- React team for the amazing framework
+- OpenAI for AI capabilities
+- Tailwind CSS for styling
+- Framer Motion for animations
+- Lucide for beautiful icons
+
+## 🔗 Links
+
+- [🌟 Star on GitHub](https://github.com/0xIvaR/IVAR)
+- [🐛 Report Bug](https://github.com/0xIvaR/IVAR/issues)
+- [💡 Request Feature](https://github.com/0xIvaR/IVAR/issues)
+- [💬 Discussions](https://github.com/0xIvaR/IVAR/discussions)
 
 ---
 
-## 📞 Support & Contact
-
-- 🐛 **Bug Reports**: [Create an Issue](https://github.com/0xIvaR/IVAR/issues)
-- 💡 **Feature Requests**: [Start a Discussion](https://github.com/0xIvaR/IVAR/discussions)
-- 📧 **Email**: sohamkundu4012@gmail.com
-- 👨‍💻 **Developer**: [@0xIvaR](https://github.com/0xIvaR)
-
-### 🌟 Show Your Support
-
-If you find IVAR useful, please consider:
-- ⭐ **Starring** this repository
-- 🍴 **Forking** to contribute
-- 📢 **Sharing** with fellow developers
-- 💬 **Following** [@0xIvaR](https://github.com/0xIvaR) for updates
-
----
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=0xIvaR&repo=IVAR&theme=radical&hide_border=true" alt="IVAR Repository Stats">
-</p>
-
-<p align="center">
-  <strong>🔥 Built with ❤️ by <a href="https://github.com/0xIvaR">Soham Kundu</a> | Ready for the Future of Voice AI 🚀</strong>
-</p>
-
-<p align="center">
-  <a href="#top">⬆️ Back to Top</a>
-</p> 
+<div align="center">
+Made with ❤️ by <a href="https://github.com/0xIvaR">Soham Kundu</a>
+</div>

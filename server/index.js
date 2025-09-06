@@ -1,6 +1,8 @@
-const express = require('express')
-const cors = require('cors')
-require('dotenv').config()
+import express from 'express'
+import cors from 'cors'
+import dotenv from 'dotenv'
+
+dotenv.config()
 
 const app = express()
 const PORT = process.env.PORT || 5000
@@ -40,7 +42,7 @@ app.post('/api/chat', async (req, res) => {
 
 // OpenAI Integration (uncomment when API key is available)
 /*
-const { OpenAI } = require('openai')
+import OpenAI from 'openai'
 
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY
